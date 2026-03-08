@@ -12,6 +12,6 @@ public class Student {
     }
     @Override
     public String toString() {
-        return "Student{" + "numarMatricol=" + numarMatricol + ", nume=" + nume + '}';
+        return "Student{" + "numarMatricol=" + numarMatricol + ", nume=" + nume + ", prenume=" + prenume  + ", formatieDeStudiu=" + formatieDeStudiu + '}';
     }
 }
