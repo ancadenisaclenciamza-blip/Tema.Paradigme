@@ -6,6 +6,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         //ex 2.5.1(lab2)
+        System.out.println("ex 2.5.1");
         List<Integer> x = new ArrayList();
         List<Integer> y = new ArrayList();
         List<Integer> xPlusY = new ArrayList(); //a
@@ -48,9 +49,10 @@ public class Main {
 
 
 //ex 2.5.2 lab2
+        System.out.println("ex 2.5.2");
         Student student1= new Student(474,"Popa", "Alin", "A123" );
         System.out.println(student1);
-        //cream lista
+
         List<Student> listaStudenti = new ArrayList<>();
         listaStudenti.add(student1);
         listaStudenti.add(new Student(112, "Popa", "Maria", "TI21/1"));
@@ -62,20 +64,35 @@ public class Main {
         // b & c
         Student alis= new Student(120, "Popa", "Alis", "TI21/1");
         Student maria=new Student(112, "Popa", "Maria", "TI21/1");
-        System.out.println("Este Alis in lista?"+ cautaStudent (listaStudenti, alis));
-        System.out.println("Este Maria in lista?"+ cautaStudent (listaStudenti, maria));
+
+        System.out.println("Este Alis in lista?"+ cautaStudent(listaStudenti, alis));
+        System.out.println("Este Maria in lista?"+ cautaStudent(listaStudenti, maria));
+
+        //2.5.3
+        System.out.println("ex 2.5.3 ");
+        Set<Student> setStudenti = new HashSet<>();
+        setStudenti.add(student1);
+        setStudenti.add(new Student(112, "Popa", "Maria", "TI21/1"));
+        System.out.println("afisare studenti:");
+        for(Student s: setStudenti){
+            System.out.println(s);
+    }
+
+        System.out.println("Este Alis in lista?"+ cautaStudent(listaStudenti, alis));
+        System.out.println("Este Maria in lista?"+ cautaStudent(listaStudenti, maria));
+
 
         }
     public static boolean cautaStudent(List<Student> lista, Student s){
         return lista.contains(s);
 
 
-
-
-
-
-
-
-
     }
+    public static boolean cautaStudentInSet(Set<Student> set, Student s){
+        return set.contains(s);
 }
+
+}
+
+
+
