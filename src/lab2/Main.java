@@ -47,9 +47,35 @@ public class Main {
         System.out.println("xPlusYLimitedByP:"+ xPlusYLimitedByP);
 
 
-
+//ex 2.5.2 lab2
         Student student1= new Student(474,"Popa", "Alin", "A123" );
         System.out.println(student1);
+        //cream lista
+        List<Student> listaStudenti = new ArrayList<>();
+        listaStudenti.add(student1);
+        listaStudenti.add(new Student(112, "Popa", "Maria", "TI21/1"));
+//2.5.2 a
+        System.out.println("lista Studenti:");
+        for(Student s:listaStudenti){
+            System.out.println(s);
+        }
+        // b & c
+        Student alis= new Student(120, "Popa", "Alis", "TI21/1");
+        Student maria=new Student(112, "Popa", "Maria", "TI21/1");
+        System.out.println("Este Alis in lista?"+ cautaStudent (listaStudenti, alis));
+        System.out.println("Este Maria in lista?"+ cautaStudent (listaStudenti, maria));
+
+        }
+    public static boolean cautaStudent(List<Student> lista, Student s){
+        return lista.contains(s);
+
+
+
+
+
+
+
+
 
     }
 }
