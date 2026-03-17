@@ -1,3 +1,4 @@
+package lab2;
 public class Student {
     private Integer numarMatricol;
     private String nume;
