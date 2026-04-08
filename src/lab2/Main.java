@@ -1,5 +1,8 @@
 package lab2;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.*;
 public class Main {
@@ -81,7 +84,26 @@ public class Main {
         System.out.println("Este Alis in lista?"+ cautaStudent(listaStudenti, alis));
         System.out.println("Este Maria in lista?"+ cautaStudent(listaStudenti, maria));
 
+//ex 5.5.3(lab5)
+        System.out.println("\n--- ex 5.5.3 (Studenti Bursieri) ---");
+        List<StudentBursieri> listaBursieri = new ArrayList<>();
+        listaBursieri.add(new StudentBursieri(1025, "Popa", "Andrei", "ISM141/2", 725.50));
+        listaBursieri.add(new StudentBursieri(1024, "Mihalcea", "Ioan", "ISM141/1", 801.10));
 
+        System.out.println("Lista Studenti Bursieri:");
+        List<String> liniiDeSalvat = new ArrayList<>();
+
+        for (StudentBursieri sb : listaBursieri) {
+            System.out.println(sb);
+            liniiDeSalvat.add(sb.toFileFormat() + "," + "CuantumBursa");
+        }
+
+        try {
+            Files.write(Paths.get("bursieri_out.txt"), liniiDeSalvat);
+            System.out.println("Fisierul bursieri_out.txt a fost generat cu succes!");
+        } catch (IOException e) {
+            System.out.println("Eroare la scrierea fisierului: " + e.getMessage());
+        }
     }
     public static boolean cautaStudent(List<Student> lista, Student s){
         return lista.contains(s);
@@ -91,5 +113,6 @@ public class Main {
     public static boolean cautaStudentInSet(Set<Student> set, Student s){
         return set.contains(s);
     }
+//ex 553
 
 }
