@@ -85,15 +85,15 @@ public class Main {
         System.out.println("Este Maria in lista?"+ cautaStudent(listaStudenti, maria));
 
 //ex 5.5.3(lab5)
-        System.out.println("\n--- ex 5.5.3 (Studenti Bursieri) ---");
-        List<StudentBursieri> listaBursieri = new ArrayList<>();
-        listaBursieri.add(new StudentBursieri(1025, "Popa", "Andrei", "ISM141/2", 725.50));
-        listaBursieri.add(new StudentBursieri(1024, "Mihalcea", "Ioan", "ISM141/1", 801.10));
+        System.out.println("\n ex 5.5.3 (Studenti Bursieri) ---");
+        List<StudentBursier> listaBursieri = new ArrayList<>();
+        listaBursieri.add(new StudentBursier(1025, "Popa", "Andrei", "ISM141/2", 9.0, 725.50));
+        listaBursieri.add(new StudentBursier(1024, "Mihalcea", "Ioan", "ISM141/1", 9.5, 801.10));
 
         System.out.println("Lista Studenti Bursieri:");
         List<String> liniiDeSalvat = new ArrayList<>();
 
-        for (StudentBursieri sb : listaBursieri) {
+        for (StudentBursier sb : listaBursieri) {
             System.out.println(sb);
             liniiDeSalvat.add(sb.toFileFormat() + "," + "CuantumBursa");
         }

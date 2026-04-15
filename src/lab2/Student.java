@@ -7,12 +7,13 @@ public class Student {
     private String nume;
     private String prenume;
     private String formatieDeStudiu;
+    protected double nota;
 
-    public Student(Integer numarMatricol, String nume,  String prenume, String formatieDeStudiu) {
+    public Student(Integer numarMatricol, String prenume, String nume, String formatieDeStudiu) {
         this.numarMatricol = numarMatricol;
+        this.prenume = prenume;
         this.nume = nume;
-        this.prenume=prenume;
-        this.formatieDeStudiu=formatieDeStudiu;
+        this.formatieDeStudiu = formatieDeStudiu;
     }
     @Override
     public String toString() {
@@ -41,6 +42,9 @@ public class Student {
     }
     public String getFormatieDeStudiu() {
         return formatieDeStudiu;
+    }
+    public double getNota() {
+        return nota;
     }
 
     public String toFileFormat() {
