@@ -1,0 +1,2 @@
+1025,Andrei,Popa,ISM141/2,CuantumBursa
+1024,Ioan,Mihalcea,ISM141/1,CuantumBursa
